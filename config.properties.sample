@@ -1,0 +1,6 @@
+lexiconPath=/.../lexicon
+invertedPath=/.../inverted
+minLongestCommonPrefixLength=5
+prefixLength=3
+rcoWeight=0.5
+outputPath=/.../output
