@@ -24,8 +24,6 @@ I decided to respect a very important principle of software engineering: the des
 
 Breaking up the code into modules helps to organize large code bases and makes programs easier to understand. Modules are helpful also for creating libraries that can be imported and used in different applications which share some functionalities. I created many standalone modules that can be used and extended even outside the context of this project.
 
-![img](https://www.imageupload.co.uk/images/2018/06/12/com.stemby.png)
-
 I split the code into two main packages:
 - `code.stemby.commons` General purpose package that can be used for a variety of tasks
 - `com.stemby.ir` Package that contains classes and interfaces closely tied to IR
