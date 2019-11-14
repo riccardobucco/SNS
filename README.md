@@ -2,6 +2,36 @@
 An implementation of the stemming algorithm for text retrieval presented in:
 
 Paik, J. H., Pal, D., & Parui, S. K. (2011). *A Novel Corpus-Based Stemming Algorithm using Co-occurrence Statistics*. Proceedings of the 34th International ACM SIGIR Conference on Research and Development in Information Retrieval.
+## Quick start
+The stemmer needs a `config.properties` file, where you should set:
+
+* `lexiconPath`: the path to the lexicon file
+* `invertedPath`: the path to the inverted index file
+* `minLongestCommonPrefixLength`: the minimum longest common prefix length 
+* `prefixLength`: the common prefix length
+* `rcoWeight`: the multiplier used to re-calculate the co-occurrences weights
+* `outputPath`: the path for the output file
+
+The parameters `minLongestCommonPrefixLength`, `prefixLength` and `rcoWeight` are those specified in the paper.
+
+When everything is set, you can build and run the stemmer:
+
+```
+make && make start
+```
+
+If you want to specify the heap size of the JVM (for example, 2GB), you can execute:
+
+```
+make start HEAP_SIZE=2g
+```
+
+You can easily create the Javadoc with:
+
+```
+make javadoc
+```
+
 ## Algorithm overview
 The goal of SNS is to group morphologically related words in different clusters, using the frequencies of every word in each document. The stemmer does not make use of language-specific rules, but only information about occurrences of the word: it is language-independent.
 
